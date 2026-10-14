@@ -1,0 +1,17 @@
+From: Valid, ~Frozen, ~Missing
+To: Valid, ~Missing, ~SameAsFrom
+Amount: Normal, ~Zero, ~Negative, ~OverBalance, ~OverLimit
+Currency: Same, Different
+DailyLimit: Available, NearlyUsed
+Balance: Sufficient, Insufficient
+
+IF [To] = "SameAsFrom" THEN [From] <> "Missing";
+
+IF [Amount] = "Normal" THEN
+    [Balance] = "Sufficient" AND [DailyLimit] = "Available";
+
+IF [Amount] = "OverBalance" THEN
+    [Balance] = "Insufficient";
+
+IF [Amount] = "OverLimit" THEN
+    [Balance] = "Sufficient" AND [DailyLimit] = "NearlyUsed";

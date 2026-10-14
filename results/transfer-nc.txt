@@ -1,0 +1,17 @@
+From	To	Amount	Currency	DailyLimit	Balance
+Missing	SameAsFrom	Zero	Same	Available	Sufficient
+Valid	SameAsFrom	OverLimit	Different	NearlyUsed	Insufficient
+Missing	Valid	Negative	Different	Available	Insufficient
+Frozen	SameAsFrom	OverBalance	Same	NearlyUsed	Sufficient
+Frozen	Missing	Zero	Different	NearlyUsed	Insufficient
+Valid	Missing	OverBalance	Different	Available	Sufficient
+Valid	Missing	Negative	Same	NearlyUsed	Sufficient
+Valid	Valid	Zero	Same	NearlyUsed	Sufficient
+Frozen	SameAsFrom	Normal	Same	Available	Insufficient
+Missing	Missing	Normal	Different	NearlyUsed	Sufficient
+Missing	Valid	OverLimit	Same	Available	Sufficient
+Frozen	SameAsFrom	Negative	Different	NearlyUsed	Sufficient
+Missing	Valid	OverBalance	Same	NearlyUsed	Insufficient
+Frozen	Missing	OverLimit	Same	Available	Sufficient
+Frozen	Valid	Normal	Same	NearlyUsed	Sufficient
+Valid	Missing	Normal	Different	Available	Sufficient
